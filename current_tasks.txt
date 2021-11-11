@@ -1,0 +1,8 @@
+Curtis:
+additional background research on daylight savings time and traffic implications
+
+Mary:
+upload data and single out Chicago (or possibly another city) from the total dataset
+
+Jeff:
+get the base of a streamlit app ready to accept a pickled model
