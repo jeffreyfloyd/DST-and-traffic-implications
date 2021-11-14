@@ -48,8 +48,7 @@ https://smoosavi.org/datasets/us_accidents
 |41	|Traffic_Calming	|A POI annotation which indicates presence of traffic_calming in a nearby location.	|No|
 |42	|Traffic_Signal	|A POI annotation which indicates presence of traffic_signal in a nearby loction.	|No|
 |43	|Turning_Loop	|A POI annotation which indicates presence of turning_loop in a nearby location.	|No|
-|44	|Sunrise_Sunset	Shows the period of day (i.e. day or night) based on sunrise/sunset.	|Yes|
-|45	|Civil_Twilight	Shows the period of day (i.e. day or night) based on civil twilight.	|Yes|
-|46	|Nautical_Twilight	Shows the period of day (i.e. day or night) based on nautical twilight.	|Yes|
-|47	|Astronomical_Twilight	Shows the period of day (i.e. day or night) based on astronomical twilight.	|Yes|
-|   	|   	|   	|   	|
+|44	|Sunrise_Sunset	|Shows the period of day (i.e. day or night) based on sunrise/sunset.	|Yes|
+|45	|Civil_Twilight	|Shows the period of day (i.e. day or night) based on civil twilight.	|Yes|
+|46	|Nautical_Twilight	|Shows the period of day (i.e. day or night) based on nautical twilight.	|Yes|
+|47	|Astronomical_Twilight	|Shows the period of day (i.e. day or night) based on astronomical twilight.	|Yes|
