@@ -44,7 +44,7 @@ https://smoosavi.org/datasets/us_accidents
 |37	|Railway	|A POI annotation which indicates presence of railway in a nearby location.	|No|
 |38	|Roundabout	|A POI annotation which indicates presence of roundabout in a nearby location.	|No|
 |39	|Station	|A POI annotation which indicates presence of station in a nearby location.	|No|
-|40	||Stop	|A POI annotation which indicates presence of stop in a nearby location.	|No|
+|40	|Stop	|A POI annotation which indicates presence of stop in a nearby location.	|No|
 |41	|Traffic_Calming	|A POI annotation which indicates presence of traffic_calming in a nearby location.	|No|
 |42	|Traffic_Signal	|A POI annotation which indicates presence of traffic_signal in a nearby loction.	|No|
 |43	|Turning_Loop	|A POI annotation which indicates presence of turning_loop in a nearby location.	|No|
