@@ -11,7 +11,7 @@ if page == 'About':
     st.write('Can we predict the severity of an accident based on certain conditions at the time of the accident?')
 
 if page = 'Make a Prediction':
-    model_type = st.selectbox('Select a Model Type', ['XGBoost','Random Forrest','Neural Net'])
+    model_type = st.selectbox('Select a Model Type', ['XGBoost','BAG','Neural Net'])
 
 def prediction():
     return
