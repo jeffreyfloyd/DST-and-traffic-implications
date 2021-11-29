@@ -2,6 +2,8 @@ import streamlit as st
 import pickle
 import numpy as np
 import tensorflow as tf
+import pydeck as pdk
+import requests
 
 st.title('Accident Severity Prediction')
 
@@ -10,8 +12,24 @@ page = st.sidebar.selectbox('Select a page', ('About','Make a Prediction'))
 if page == 'About':
     st.write('Can we predict the severity of an accident based on certain conditions at the time of the accident?')
 
-if page = 'Make a Prediction':
-    model_type = st.selectbox('Select a Model Type', ['XGBoost','BAG','Neural Net'])
+if page == 'Make a Prediction':
+    lat_text = st.text_input('Lattitude Coordinate', value = '41.8781')
+    lon_text = st.text_input('Longitude Coordinate', value = '-87.6298')
+    
+    if st.button('tell me the weather'):
+        url = 'http://api.weatherapi.com/v1'
+        slug = '/current.json'
+        parameters = {
+            'key': '0cb381c6bf3c4d4384b155640212911',
+            'q': f'{lat_text},{lon_text}'
+        }
+
+        res = requests.get(url+slug, parameters)
+        weather_data = res.json()
+        st.write(f'{weather_data}')
+    
+    with open('./models/xgboost.pkl', mode='rb') as pickle_in:
+        xg_model = pickle.load(pickle_in)
 
 def prediction():
     return
