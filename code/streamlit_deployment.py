@@ -8,12 +8,12 @@ import requests
 import datetime as dt
 from dateutil import parser
 
-st.title('Accident Severity Prediction')
+st.title('Accident Traffic Impact Prediction')
 
 page = st.sidebar.selectbox('Select a page', ('About','Make a Prediction'))
 
 if page == 'About':
-    st.write('Can we predict the severity of an accident based on certain conditions at the time of the accident?')
+    st.write('Can we predict how severely an accident will impact traffic based on location and weather conditions at the time it occurs?')
 
 if page == 'Make a Prediction':
     lat_text = st.text_input('Lattitude Coordinate', value = '41.8781')
@@ -63,7 +63,8 @@ if page == 'Make a Prediction':
 def prediction():
     return
 
-# <a href="https://www.weatherapi.com/" title="Free Weather API"><img src='//cdn.weatherapi.com/v4/images/weatherapi_logo.png' alt="Weather data by WeatherAPI.com" border="0"></a>
+html_string = '<a href="https://www.weatherapi.com/" title="Free Weather API"><img src="//cdn.weatherapi.com/v4/images/weatherapi_logo.png" alt="Weather data by WeatherAPI.com" border="0"></a>'
+st.markdown(html_string, unsafe_allow_html=True)
 
 # if page == "":
 #     st.write("")
