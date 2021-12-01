@@ -19,6 +19,58 @@ def get_weather(lat, lon):
 
     res = requests.get(url+slug, parameters)
     weather_data = res.json()
+    
+    condition_dict = {
+        1000 : 'Clear',
+        1006 : 'Cloudy',
+        1135 : 'Fog',
+        1171 : 'Freezing Rain',
+        1201 : 'Freezing Rain',
+        1195 : 'Heavy Rain',
+        1192 : 'Heavy Rain',
+        1243 : 'Heavy Rain',
+        1246 : 'Heavy Rain',
+        1225 : 'Heavy Snow',
+        1117 : 'Heavy Snow',
+        1114 : 'Heavy Snow',
+        1258 : 'Heavy Snow',
+        1222 : 'Heavy Snow',
+        1153 : 'Light Drizzle',
+        1150 : 'Light Drizzle',
+        1168 : 'Light Freezing Drizzle',
+        1072 : 'Light Freezing Drizzle',
+        1147 : 'Light Freezing Fog',
+        1198 : 'Light Freezing Rain',
+        1261 : 'Light Ice Pellets',
+        1237 : 'Light Ice Pellets',
+        1264 : 'Light Ice Pellets',
+        1153 : 'Light Rain',
+        1183 : 'Light Rain',
+        1240 : 'Light Rain Showers',
+        1180 : 'Light Rain Showers',
+        1213 : 'Light Snow',
+        1255 : 'Light Snow',
+        1210 : 'Light Snow',
+        1204 : 'Light Snow and Sleet / Windy',
+        1249 : 'Light Snow and Sleet / Windy',
+        1207 : 'Light Snow and Sleet / Windy',
+        1252 : 'Light Snow and Sleet / Windy',
+        1069 : 'Light Snow and Sleet / Windy',
+        1030 : 'Mist',
+        1009 : 'Overcast',
+        1003 : 'Partly Cloudy',
+        1189 : 'Rain',
+        1186 : 'Rain',
+        1063 : 'Rain',
+        1219 : 'Snow',
+        1216 : 'Snow',
+        1066 : 'Snow',
+        1276 : 'Thunderstorms and Rain',
+        1282 : 'Light Thunderstorms and Snow',
+        1279 : 'Light Thunderstorms and Snow',
+        1273 : 'Light Rain with Thunder',
+        1087 : 'Thunder',
+    }
         
     current_time = parser.parse(weather_data['location']['localtime'])
     current_weather = {
@@ -36,6 +88,7 @@ def get_weather(lat, lon):
         'week': current_time.strftime('%U'),
         'start_time_ep': (current_time - dt.datetime(1970,1,1)).total_seconds(),
         f"wind_direction_{weather_data['current']['wind_dir']}": 1,
+        f"weather_condition_{condition_dict[weather_data['current']['condition']['code']]}" : 1,
         f"day_{current_time.strftime('%A')}": 1,
         f"hour_{current_time.strftime('%H')}": 1
     }
