@@ -93,9 +93,11 @@ def get_weather(lat, lon):
         f"hour_{current_time.strftime('%H')}": 1
     }
     
-    return current_weather
+    weather_string = f"{weather_data['current']['condition']['text']}\n{weather_data['current']['temp_f']} F ({weather_data['current']['feelslike_f']} F)\nHumidity: {weather_data['current']['humidity']}%\nPressure: {weather_data['current']['pressure_in']}\nVisibility: {weather_data['current']['vis_miles']} mi\nWind Spd/Dir: {weather_data['current']['wind_mph']} mph {weather_data['current']['wind_dir']}\nPrecipitation(in): {weather_data['current']['precip_in']}"
+    
+    return current_weather, weather_string
 
-def prediction(weather_params):
+def prediction(weather_params, model_city):
         
     with open('./models/xgboost.pkl', mode='rb') as pickle_in:
         xg_model = pickle.load(pickle_in)
@@ -108,54 +110,46 @@ def prediction(weather_params):
     return xg_model.predict(pred_df)[0]
 
 st.title('Accident Traffic Impact Prediction')
+st.markdown('<a href="https://github.com/jeffreyfloyd/DST-and-traffic-implications">Check out our Github to learn more about this application!</a>', unsafe_allow_html=True)
+    
+city = st.selectbox('Select a City', ('Atlanta','Boston','Chicago','Denver'))
+if city == 'Atlanta':
+    lattitude = 33.7490
+    longitude = -84.3880
+elif city == 'Boston':
+    lattitude = 42.3601
+    longitude = -71.0589
+elif city == 'Chicago':
+    lattitude = 41.8781
+    longitude = -87.6298
+elif city == 'Denver':
+    lattitude = 39.7392
+    longitude = -104.9903
+    
+weather_dict, weather_str = get_weather(lattitude, longitude)
+    
+lat_text = st.text_input('Lattitude Coordinate', value = f'{lattitude}')
+lon_text = st.text_input('Longitude Coordinate', value = f'{longitude}')
+    
+severity_dict = {
+    1 : 'Mild',
+    2 : 'Moderate',
+    3 : 'Severe',
+    4 : 'Extreme'
+}
 
-page = st.sidebar.selectbox('Select a page', ('About','Make a Prediction'))
-
-if page == 'About':
-    st.write('Can we predict how severely an accident will impact traffic based on location and weather conditions at the time it occurs?')
-
-if page == 'Make a Prediction':
+if st.button('Predict!'):
+    st.write(f'Predicted Traffic Impact is {severity_dict[prediction(weather_dict, city.lower())]}')
     
-    city = st.selectbox('Select a City', ('Atlanta','Boston','Chicago','Denver'))
-    if city == 'Atlanta':
-        lattitude = 33.7490
-        longitude = -84.3880
-    elif city == 'Boston':
-        lattitude = 42.3601
-        longitude = -71.0589
-    elif city == 'Chicago':
-        lattitude = 41.8781
-        longitude = -87.6298
-    elif city == 'Denver':
-        lattitude = 39.7392
-        longitude = -104.9903
-    
-    weather_dict = get_weather(lattitude, longitude)
-    
-    lat_text = st.text_input('Lattitude Coordinate', value = f'{lattitude}')
-    lon_text = st.text_input('Longitude Coordinate', value = f'{longitude}')
-    
-    severity_dict = {
-        1 : 'Mild',
-        2 : 'Moderate',
-        3 : 'Severe',
-        4 : 'Extreme'
-    }
-    
-    if st.button('Predict!'):
-        st.write(f'Predicted Traffic Impact is {severity_dict[prediction(weather_dict)]}')
-    
-    fig = Figure(width=550, height=350)
-    m1 = folium.Map(width=550, height=350, location=[float(lat_text),float(lon_text)], zoom_start=10, max_zoom=16, min_zoom=8)
-    fig.add_child(m1)
-    folium.Marker(location=[float(lat_text),float(lon_text)], popup='marker 1').add_to(m1)
-    folium_static(m1)
-    
-    
+fig = Figure(width=550, height=550)
+m1 = folium.Map(width=550, height=550, location=[float(lat_text),float(lon_text)], zoom_start=10, max_zoom=16, min_zoom=8)
+fig.add_child(m1)
+folium.Marker(location=[float(lat_text),float(lon_text)], popup=f'{weather_str}', ).add_to(m1)
+folium_static(m1)
 
 html_string = '<a href="https://www.weatherapi.com/" title="Free Weather API"><img src="//cdn.weatherapi.com/v4/images/weatherapi_logo.png" alt="Weather data by WeatherAPI.com" border="0"></a>'
 st.markdown(html_string, unsafe_allow_html=True)
-
+    
 # if page == "":
 #     st.write("")
 #     name = st.checkbox('')
