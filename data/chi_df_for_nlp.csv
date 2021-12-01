@@ -15601,6 +15601,7 @@ severity,description
 2,Queuing traffic on I-294 from I-55/Adlai E Stevenson Expy (La Grange) (South) (I-294) to IL-171/Archer Ave (I-294) due to accident.
 2,Incident on I-294 SB near 75TH ST Three lanes blocked. Expect delays.
 2,Incident on I-294 SB near IL-72 Left lane blocked.
+2,Incident on I-94 EB near BRADLEY RD Right lane blocked. Expect delays.
 2,Incident on DEEP LAKE RD NB near GRASS LAKE RD Drive with caution.
 2,Stationary traffic on IL-53 from N Arlington Heights Rd (W Lake Cook Rd) to US-12/Rand Rd (Lake Cook Rd) due to accident.
 2,Incident on LAKE COOK RD WB near ARLINGTON HEIGHTS RD Drive with caution.
@@ -16905,6 +16906,7 @@ severity,description
 2,Incident on I-294 NB near IL-19 Right lane blocked. Expect delays.
 2,Incident on I-294 SB near MANNHEIM RD Left lane blocked.
 2,Incident on LAKE COOK RD EB near ARLINGTON HEIGHTS RD Drive with caution.
+2,Incident on I-94 EB near BRADLEY RD Right lane blocked. Expect delays.
 2,Incident on DEEP LAKE RD NB near GRASS LAKE RD Drive with caution.
 2,Slow traffic on I-94 W - I-80 W - US-6 W from Kennedy Ave/Exit 3B (I-94/I-80) to US-41/Indianapolis Blvd/Exit 2 (I-94/I-80) due to accident.
 2,Incident on I-355 NB near IL-38 Left lane blocked.
@@ -18295,6 +18297,7 @@ severity,description
 3,At CR-24/Medinah Rd - Accident.
 3,At Aptakisic Rd - Accident.
 3,At I-55 - Accident.
+3,At IL-50/IL-83/Cicero Ave - Accident.
 3,At IL-83 - Accident.
 3,At I-290/Eisenhower Expy - Accident.
 3,At I-355/Vets Meml Tollway/Exit 140 - Accident.
@@ -19847,10 +19850,12 @@ severity,description
 3,At US-20/Lake St - Accident.
 3,At US-12/US-20/US-45/Exit 279 - Earlier accident. on the right.
 3,At N York Rd - Accident.
+3,At S Old Rand Rd - Accident.
 3,At Schmale Rd - Accident.
 3,Between Des Plaines Ave/Exit 21A and Wolf Rd/Exit 16 - Earlier accident.
 3,At I-294/IL-83/IL-50/S Cicero Ave - Accident.
 3,At CR-10/N Walnut Ave/N Walnut St - Accident.
+3,At CR-16/CR-W14/Buffalo Grove Rd - Accident.
 3,At IL-19/Irving Park Rd - Accident.
 3,At 29th St - Accident.
 3,At I-294 - Accident.
@@ -19870,21 +19875,29 @@ severity,description
 4,Closed at CR-F/Briggs Rd - Road closed due to accident.
 3,At US-12/US-20/95th St - Accident.
 4,Closed at WI-11/CR-H/Court St/Walworth St - Road closed due to accident.
+3,At US-12/S Rand Rd/W Ivanhoe Rd - Accident.
 4,Closed at I-43 - Road closed due to accident.
 4,Closed at Bowers Rd - Road closed due to accident.
+3,At Euclid Ave - Accident.
 4,Closed at WI-11/CR-H/Court St/Walworth St - Road closed due to accident.
 4,Closed at CR-F/Briggs Rd - Road closed due to accident.
+3,At Anderson Rd - Accident.
 3,Ramp to W Foster Ave - Accident. Hard shoulder blocked.
+3,At W Deerpath Rd - Accident.
 3,At CR-V67/N Deep Lake Rd/Red Oak Ln - Accident.
 3,At CR-15/Summit Ave - Accident.
 3,At US-30/Maple St/Exit 137 - Accident. Right lane blocked.
 2,Between US-45/96th Ave/Exit 145 and US-30/Maple St/Exit 137 - Earlier accident.
+3,At I-294 - Accident.
 2,At US-30/Maple St/Exit 137 - Accident in the opposing lanes.
 3,At I-355/Vets Meml Tollway/Exit 140 - Accident. Right lane blocked. on the right.
+3,At IL-58/Golf Rd - Accident. Hard shoulder blocked.
 3,At 10th St/55th St - Accident.
 3,At US-30/Maple St/Exit 137 - Accident. Right lane blocked. on the right.
+3,At CR-16/CR-W14/Buffalo Grove Rd - Accident.
 3,Ramp to I-57/Exit 63 - Accident.
 3,At S West St/Warrenville Rd - Accident.
+3,At CR-16/CR-W14/Buffalo Grove Rd - Accident.
 3,At US-12/US-20/US-45/Exit 17 - Accident.
 3,At I-355/Vets Meml Tollway/Exit 140 - Accident. Right lane blocked. on the right.
 3,At US-12/IL-59 - Accident.
@@ -19900,7 +19913,9 @@ severity,description
 3,At US-12/IL-59 - Accident.
 3,At CR-31/CR-A20/E Rollins Rd - Accident.
 3,At Randolph St/Exit 51B - Accident.
+4,Closed between Barrington Rd and CR-44/CR-V47/N Darrell Rd - Road closed due to accident.
 2,Between Armitage Ave/Exit 48A and Ogden Ave/Exit 50A - Earlier accident.
+4,Closed at Anderson Rd - Road closed due to accident.
 3,At Ohio St/Exit 50B - Accident.
 3,At CR-31/CR-A20/E Rollins Rd - Accident.
 3,At Big Hollow Rd - Accident.
@@ -19911,8 +19926,12 @@ severity,description
 3,At IL-83/Kingery Hwy - Accident.
 3,At IL-1/Halsted St/Exit 357 - Accident.
 3,At I-90/I-94 Eastern Split - Vehicle spun around.
+3,At Willow Rd - Accident. Hard shoulder blocked.
 3,At Pulaski Rd/Exit 287 - Accident.
+3,At IL-22/Half Day Rd - at Duffy lane - Accident. Right lane blocked.
 3,At I-355 - Accident.
+4,Closed between Portwine Rd and CR-73/CR-W17/Weiland Rd - Road closed due to accident.
+4,Closed at US-45/IL-21/Milwaukee Ave - Road closed due to accident.
 3,At Monee Manhattan Rd/Exit 335 - Accident.
 3,Between Laramie Ave/Exit 24A and IL-50/Cicero Ave/Exit 24B - Accident. Right lane blocked.
 3,At 95th St - Accident.
@@ -23292,6 +23311,7 @@ severity,description
 3,At Crawford Ave/Pulaski Rd - Overturned vehicle.
 1,Ramp to S Flournoy St and S Central Ave - Earlier accident.
 3,At Crawford Ave - Overturned vehicle.
+3,At 135th St - Accident.
 3,Ramp to Exit 50A - Accident.
 3,At N Milwaukee Ave/N Halsted St - Accident.
 1,At Ogden Ave/Exit 50A - Earlier accident.
@@ -23734,6 +23754,9 @@ severity,description
 3,At W Roosevelt Rd - Accident.
 3,At IL-131/S Green Bay Rd - Accident.
 4,Closed at Washington St - Road closed due to accident.
+3,Between Seneca Rd/Exit 105 and 30th Rd/Lasalle Rd - Accident.
+3,Between Seneca Rd/Exit 105 and 30th Rd/Lasalle Rd - Accident.
+3,Between Seneca Rd/Exit 105 and 30th Rd/Lasalle Rd - Accident.
 1,At Ashland Blvd/Paulina St/Exit 28B - Earlier accident.
 3,At IL-43/S Harlem Ave - Accident.
 3,At Batavia Rd - Accident.
@@ -24944,6 +24967,9 @@ severity,description
 3,At Fairfield Rd - Accident.
 3,At Gilmer Rd - Accident.
 3,At IL-59 - Accident.
+4,Closed at Meadow Ln - near Indian Boundry Line Rd - Road closed due to accident.
+4,Closed at Indian Boundary Rd - Road closed due to accident.
+4,Closed at US-30/W Lincoln Hwy - Road closed due to accident.
 2,Between Burr St/Exit 6 and Kennedy Ave/Exit 3 - Accident. Left lane blocked.
 3,At Exchange Ave - Accident.
 3,Between 18th St/Exit 52C and Canalport Ave/Cermak Rd/Exit 53 - Accident.
@@ -25395,6 +25421,7 @@ severity,description
 3,Ramp to Canalport Ave/Cermak Rd/Exit 53 - Accident.
 3,At IL-176/Rockland Rd - at Bradley Rd - Accident. Right lane blocked.
 3,At I-94/Lake Cook Rd - Accident. Left lane blocked.
+3,At Barrington Rd - Accident. Right lane blocked.
 3,At IL-72/Lee St - at Mannheim Rd - Accident.
 2,At St Lawrence Ave - Accident.
 3,At Fullerton Ave/Exit 47A - Accident.
@@ -25407,6 +25434,7 @@ severity,description
 2,At O'Plaine Rd - Accident.
 3,At Fish Lake Rd - Accident.
 3,At Lake Ave/Exit 34 - Accident.
+3,At Randall Rd - near IL-72 - Accident.
 3,At Sacramento Blvd/Exit 27A - Accident.
 4,Ramp closed to I-90/I-94 Eastbound and W Taylor St - Road closed due to accident. Roadwork.
 3,Ramp to Austin Ave/Exit 82C - Accident.
@@ -27088,6 +27116,7 @@ severity,description
 2,Between CR-W34/Lewis Ave and US-41/Skokie Hwy - Accident.
 2,At I-90/Kennedy Expy - Accident. Lane blocked.
 3,At 114 - Accident.
+4,Closed between Honey Creek Rd and Hill Valley Rd - Road closed due to accident.
 3,At Michigan City Rd - Accident.
 3,At Homan Ave/Exit 26B - Accident. Left lane blocked.
 3,At Homan Ave/Exit 26B - Accident. Left lane blocked.
@@ -32116,6 +32145,17 @@ severity,description
 3,At IL-64/W North Ave - Accident.
 4,Closed at IL-53/Exit 227 - Road closed due to accident.
 3,At Balmoral Ave - Accident. Two lanes blocked.
+3,At Newton/Lake County Line - Overturned vehicle.
+4,Closed at Route 59 - Road closed due to accident.
+4,Closed at IL-59 - Road closed due to accident.
+4,Closed between IL-59 and US-34/Ogden Ave - Road closed due to accident.
+4,Closed at IL-59 - Road closed due to accident.
+4,Closed at W Jefferson Ave - Road closed due to accident.
+4,Closed between W Jefferson Ave and US-34/W Ogden Ave - Road closed due to accident.
+2,At US-20/Lake St - Accident. Road surface in poor condition.
+2,At Damen Ave/Exit 28A - Accident.
+3,Between IL-64/North Ave/Exit 48B and Division St/Exit 49A - Accident.
+3,At IL-50/Cicero Ave - Accident.
 3,Ramp to Canalport Ave/Cermak Rd/Exit 53 - Accident.
 3,Ramp to I-55/Stevenson Expy - Accident.
 3,Ramp to I-55/Stevenson Expy - Accident.
@@ -33300,6 +33340,26 @@ severity,description
 3,At I-90/Kennedy Expy - Accident.
 3,At Martin L King Dr/Exit 293D - Accident.
 3,At Armitage Ave/Exit 48A - Accident.
+3,At Kankakee Rest Area - Overturned vehicle.
+3,At Independence Blvd/Exit 26A - Accident.
+4,Closed at Route 59 - Road closed due to accident.
+2,At Laramie Ave/Exit 24A - Accident.
+4,Closed at Lake St - Road closed due to accident.
+4,Closed at CR-24/CR-V60/N Hainesville Rd - Road closed due to accident.
+3,At IL-171/Cumberland Ave/Exit 79 - Accident.
+2,At I-294/Tri-State Tollway - Accident.
+2,At 43rd St/Exit 56A - Accident.
+2,At Glenwood Dyer Rd - Accident.
+3,At Garfield Blvd/Exit 57B - Accident.
+3,At Bradley Rd - Accident.
+3,At Old Skokie Rd - Accident.
+3,At O'Plaine Rd - Accident.
+3,At Washington Blvd/Exit 51C - Accident.
+3,At E Lake Cook Rd - Accident.
+3,At OHare Oasis - Accident.
+3,At 87th St/Exit 61B - Accident.
+3,At 14th St - Overturned vehicle.
+3,At Bartlett Rd - Accident.
 2,At Fullerton Ave/Exit 47A - Accident.
 2,At I-290/IL-53 - Accident.
 3,At Roosevelt Rd - Accident.
@@ -36312,6 +36372,7 @@ severity,description
 3,At Austin Blvd/Exit 23A - Accident. in the middle lane.
 3,At Lake St/Exit 51A - Accident.
 3,At Keeler Ave/Exit 44A - Accident.
+4,Closed between 700 West/E 1800 N/N 18000 E and US Highway 41 - Road closed due to accident.
 4,Closed between US Highway 41 and 700 West/E 1800 N/N 18000 E - Road closed due to accident.
 2,At Burr St/Exit 6 - Accident.
 3,At Roosevelt Rd - Overturned vehicle.
@@ -42027,6 +42088,9 @@ severity,description
 3,At Addison St/Exit 45A - Accident.
 3,Between I-94 and I-57 - Accident. Left lane blocked.
 3,Ramp to I-57 Southbound - Accident. Left lane blocked.
+2,At US-421/Exit 39 - Accident.
+4,Closed between Knute Rockne Travel Plaza and US-421/Exit 39 - Road closed due to accident.
+4,Closed between Knute Rockne Travel Plaza and US-421/Exit 39 - Road closed due to accident.
 3,At Bryn Mawr Ave/Nagle Ave/Exit 82 - Accident.
 3,At US-12/US-20/95th St/Exit 62 - Accident. Right lane blocked.
 3,At Ashland Blvd/Paulina St/Exit 28B - Accident.
@@ -42035,6 +42099,7 @@ severity,description
 3,At Skokie Hwy - Accident.
 3,At Main St - Accident.
 3,At US-12/US-20/95th St - Accident. Right lane blocked.
+2,Between IN-39/Exit 49 and US-421/Exit 39 - Accident.
 2,At Central Ave/Exit 13 - Accident. Traffic problem.
 3,At Central Ave/Exit 13 - Accident. Traffic problem.
 3,At Central Ave/Exit 13 - Accident.
