@@ -1,8 +1,7 @@
+import streamlit as st
 import pickle
 import requests
 import folium
-import streamlit as st
-import numpy as np
 import pandas as pd
 import datetime as dt
 from dateutil import parser
