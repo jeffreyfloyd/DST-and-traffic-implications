@@ -1,2 +1,0 @@
-https://smoosavi.org/datasets/us_accidents
-https://www.madd.org/state-statistics-2
