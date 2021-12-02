@@ -111,7 +111,7 @@ def prediction(weather_params, model_city):
 st.title('Accident Traffic Impact Prediction')
 st.markdown('<a href="https://github.com/jeffreyfloyd/DST-and-traffic-implications">Check out our Github to learn more about this application!</a>', unsafe_allow_html=True)
     
-city = st.selectbox('Select a City', ('Atlanta','Boston','Chicago','Denver'))
+city = st.selectbox('Select a City', ('Atlanta','Boston','Chicago','Denver'), index=2)
 if city == 'Atlanta':
     lattitude = 33.7490
     longitude = -84.3880
@@ -145,6 +145,8 @@ m1 = folium.Map(width=550, height=550, location=[float(lat_text),float(lon_text)
 fig.add_child(m1)
 folium.Marker(location=[float(lat_text),float(lon_text)], popup=f'{weather_str}', ).add_to(m1)
 folium_static(m1)
+
+st.write("Click on the pin to see current weather information at that location!")
 
 html_string = '<a href="https://www.weatherapi.com/" title="Free Weather API"><img src="//cdn.weatherapi.com/v4/images/weatherapi_logo.png" alt="Weather data by WeatherAPI.com" border="0"></a>'
 st.markdown(html_string, unsafe_allow_html=True)
