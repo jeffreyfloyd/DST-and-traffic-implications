@@ -51,11 +51,11 @@ def get_weather(lat, lon):
         1213 : 'Light Snow',
         1255 : 'Light Snow',
         1210 : 'Light Snow',
-        1204 : 'Light Snow and Sleet / Windy',
-        1249 : 'Light Snow and Sleet / Windy',
-        1207 : 'Light Snow and Sleet / Windy',
-        1252 : 'Light Snow and Sleet / Windy',
-        1069 : 'Light Snow and Sleet / Windy',
+        1204 : 'Light Snow and Sleet',
+        1249 : 'Light Snow and Sleet',
+        1207 : 'Light Snow and Sleet',
+        1252 : 'Light Snow and Sleet',
+        1069 : 'Light Snow and Sleet',
         1030 : 'Mist',
         1009 : 'Overcast',
         1003 : 'Partly Cloudy',
@@ -149,14 +149,3 @@ folium_static(m1)
 
 html_string = '<a href="https://www.weatherapi.com/" title="Free Weather API"><img src="//cdn.weatherapi.com/v4/images/weatherapi_logo.png" alt="Weather data by WeatherAPI.com" border="0"></a>'
 st.markdown(html_string, unsafe_allow_html=True)
-    
-# if page == "":
-#     st.write("")
-#     name = st.checkbox('')
-#     animal_type = st.selectbox('', [''])
-#     age = st.slider('', 0.0, 20.0, step=0.1)
-#     sex = st.multiselect('', ['',''])
-
-#     if st.button(''):
-#         outcome = prediction()
-#         st.write(f"{outcome}")
