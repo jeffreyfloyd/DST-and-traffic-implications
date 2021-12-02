@@ -99,9 +99,9 @@ def get_weather(lat, lon):
 
 def prediction(weather_params, model_city):
         
-    with open('./models/xgboost.pkl', mode='rb') as pickle_in:
+    with open(f'./models/{model_city}.pkl', mode='rb') as pickle_in:
         xg_model = pickle.load(pickle_in)
-    with open('./models/xgboost_cols.pkl', mode='rb') as pickle_in:
+    with open(f'./models/{model_city}_cols.pkl', mode='rb') as pickle_in:
         cols = pickle.load(pickle_in)
             
     pred_df = pd.DataFrame(columns=cols)
