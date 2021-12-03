@@ -5,9 +5,17 @@ A study into the effects of daylight savings on traffic incidents in the city of
 Data Obtained From: https://smoosavi.org/datasets/us_accidents
 
 ## Table of Contents ##
+[Link to Executive Summary](https://docs.google.com/document/d/1ocNE4wLrWzBJRzkGMlQuR9KBSb5BC2hwFOq3vOTioyU/edit?usp=sharing)
+
 - Assignment Requirements
 - Problem Statement
 - Background
+- Data Cleaning and EDA
+- Modeling
+- Hypothesis Testing
+- Streamlit App
+- Limitations & Future Considerations
+- Recommencations & Conclusions
 
 ## From Assignment: Requirements ##
 **For the purposes of a DSI project, we met a few technical requirements. They are:**
