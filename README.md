@@ -68,6 +68,7 @@ We also explored ANOVA to make a determination of the statisitcal significance o
 For the Spring DST time change:
 - H0: There is not a statistically significant difference in the average severity of accidents in Chicago in the weeks before, during, and after the Spring time change.
 - Ha: There is a statistically significant difference in the average severity of accidents in Chicago in the weeks before, during, and after the Spring time change.
+
 And similarly for Fall. 
 
 
