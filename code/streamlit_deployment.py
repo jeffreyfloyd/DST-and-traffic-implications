@@ -7,6 +7,7 @@ import datetime as dt
 from dateutil import parser
 from branca.element import Figure
 from streamlit_folium import folium_static
+# for this last import you may need to install the streamlit-folium package
 
 def get_weather(lat, lon):
     url = 'http://api.weatherapi.com/v1'
@@ -111,7 +112,7 @@ def prediction(weather_params, model_city):
 st.title('Accident Traffic Impact Prediction')
 st.markdown('<a href="https://github.com/jeffreyfloyd/DST-and-traffic-implications">Check out our Github to learn more about this application!</a>', unsafe_allow_html=True)
     
-city = st.selectbox('Select a City', ('Atlanta','Boston','Chicago','Denver'), index=2)
+city = st.selectbox('Select a city where you want to make a prediction', ('Atlanta','Boston','Chicago','Denver'), index=2)
 if city == 'Atlanta':
     lattitude = 33.7490
     longitude = -84.3880
@@ -126,7 +127,8 @@ elif city == 'Denver':
     longitude = -104.9903
     
 weather_dict, weather_str = get_weather(lattitude, longitude)
-    
+
+st.write('Input the coordinates where you would like to report an accident')
 lat_text = st.text_input('Lattitude Coordinate', value = f'{lattitude}')
 lon_text = st.text_input('Longitude Coordinate', value = f'{longitude}')
     
