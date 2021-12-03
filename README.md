@@ -71,6 +71,18 @@ For the Spring DST time change:
 
 And similarly for Fall. 
 
+* To test our research hypotheses we ran both an ANOVA and a Kruskal-Wallis(KW) test on accident severity for the spring and fall time changes in Chicago. 
+* There were no significant results for the fall time change in Chicago, however there were statistically significant differences for the Atlanta dataset and the combined dataset.
+    * In the combined dataset the differences were such that we saw a decrease in accident severity from the week before the fall change to the week of the change.
+* The results of the tests for the spring time change showed strong evidence for statistical significance in both the ANOVA(f = 8.69, p-value=0.0002) and KW(statistic=16.61, p-value=0.0002) as both have p-values below our alpha set at 0.05.
+* Given this we can reject our null hypothesis for the spring time change and state that there is a statistically significant difference in the average severity of accidents in Chicago during the weeks before, during, and after the spring time change.
+* In addition to the ANOVA and KW we also calculated the Eta squared effect size, finding that the effect of the difference we found was of a small size at eta = 0.008.
+* We also ran a multiple comparison test to investigate which weeks were different from each other finding:
+    * The week before DST and the week of DST were significantly different, with a higher mean severity in the week before DST.
+    * and the week of DST and the week after DST were significantly different, with higher mean severity in the week after DST.
+* The Chicago results are somewhat counter to what might be expected, however this could be due to the differences in overall accidents for each week. The week of DST had 200 more accidents than the week after DST and almost 400 more than the week before. The higher number of accidents could be lowering the impact of the most severe accidents leading to the lower overall mean of accident severity for the week of DST.
+
+
 
 ### Streamlit App
 We created an Streamlit App that will accept GPS coordinates of a reported accident. It will then get the current local weather data and make a prediction on how severely the accident will impact traffic. The app was based on an XGBoost model. 
