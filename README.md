@@ -39,11 +39,11 @@ A study into the effects of daylight savings on traffic incidents in the city of
 
 
 ### Problem Statement
-We have been contracted by a rideshare company to look into the impacts of the spring and fall Daylight Savings Time changes on traffic accidents. To accomplish this we will be using Sobhan Moosavi’s US Accidents dataset that has gathered ~ 1.5 million US traffic accidents from February 2016 to December of 2020. The goal of this project will be to develop a model that can predict the severity (on a 1-4 scale) of a given traffic accident, and then deploy that model for use in real-time. 
+We have been contracted by a rideshare company to look into the impacts of the Spring and Fall Daylight Savings Time changes on traffic accidents. To accomplish this we will be using Sobhan Moosavi’s US Accidents dataset that has gathered ~ 1.5 million US traffic accidents from February 2016 to December of 2020. The goal of this project will be to develop a model that can predict the severity (on a 1-4 scale) of a given traffic accident, and then deploy that model for use in real-time. 
 
 
 ### Background
-Daylight Savings Time (DST) is an annual time change that occurs in the spring and fall in nearly seventy (70) countries across the globe. In the United States the time change to DST begins annually at 2:00 AM on the second Sunday in March. DST ends at 2:00 AM on the first Sunday in November. Numerous studies have been done attempting to correlate the change to DST and negative health and behavioral impacts.
+Daylight Savings Time (DST) is an annual time change that occurs in the Spring and Fall in nearly seventy (70) countries across the globe. In the United States the time change to DST begins annually at 2:00 AM on the second Sunday in March. DST ends at 2:00 AM on the first Sunday in November. Numerous studies have been done attempting to correlate the change to DST and negative health and behavioral impacts.
 
 
 ### Data Cleaning and EDA
@@ -53,18 +53,45 @@ A function called 'mrclean' was responsbility for cleaning the each cities' data
 
 
 ### Modeling
+We wanted to look at the feature importance of the is_DST feature to determine how impactful Daylight Savings could be when predicting accident severity. We focused in on the Chicago data for modeling purposes since it was the largest data set among the cities we observed. 
+
+We tried a few different model types to see which produced the best results: 
+- Decision Tree
+- Random Forest
+- BAG
+- XGBoost
 
 
 ### Hypothesis Testing
+We also explored ANOVA to make a determination of the statisitcal significance of accident severity during DST. 
+
+For the Spring DST time change:
+- H0: There is not a statistically significant difference in the average severity of accidents in Chicago in the weeks before, during, and after the Spring time change.
+- Ha: There is a statistically significant difference in the average severity of accidents in Chicago in the weeks before, during, and after the Spring time change.
+And similarly for Fall. 
 
 
 ### Streamlit App
+We created an Streamlit App that will accept GPS coordinates of a reported accident. It will then get the current local weather data and make a prediction on how severely the accident will impact traffic. The app was based on an XGBoost model. 
 
 
 ### Recommendations & Conclusions
-While we found that the end of Daylight Savings in the Fall has no statistically relevant effect on average severity of traffic impact, the start of Daylight Savings in the Spring has a large effect on the average severity of traffic impact in all cities we observed
+While we found that the end of DST in the Fall has no statistically relevant effect on average severity of traffic impact, the start of DST in the Spring has a large effect on the average severity of traffic impact in all cities we observed
 
-Because the impact is so significant at the start of Daylight Savings Sigmoids Data Science can confidently recommend that Rideshare Company ® begin lobbying to abolish Daylight Savings altogether. 
+Because the impact is so significant at the start of DST Sigmoids Data Science can confidently recommend that Rideshare Company ® begin lobbying to abolish DST altogether. 
 
 
 ### Limitations & Future Considerations
+1. Limitations
+    - Individual computing power prevented processing of full data set
+    - Accidents of severity 1 seem to be either underreported or misreported. This potentially limited our ability to model this label as accurately as other labels.
+    - Individual cities see impacts at different rates making it more difficult to paint a broader picture of DST impact
+    - Dependency incompatibility for certain Python packages that could increase streamlit user-friendliness
+    
+2. Future Considerations
+    - NLP on the dropped feature “description”  to see if a determination could be made on accident locations. For example, a service road can be beneath a highway and accidents could happen in both locations but it’s more likely for an accident to occur at higher speeds on the highway. 
+    - Further ANOVA to include the frequency of accidents and impact of Day/Night on accident severity during the week of DST.
+    - Additional modeling on cities other than Chicago to see if the models’ performance holds across geographic locations.
+    - Contact the creator of the dataset and ask what the quality of “accident severity” measures (how long the duration of each severity is).
+    - Integrate GeoPandas into the Streamlit app in order to have ‘drag-and-drop’ functionality with the map. 
+
